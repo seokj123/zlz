@@ -42,6 +42,7 @@ public class GoodsDemoController {
 	} 
 	@DeleteMapping(value="deleteGoods")
 	public boolean deleteGoods(int id) {
+		System.out.println("78979877");
 		return goodsdemoService.deleteGoods(id) > 0 ? true : false;
 	}
 	
