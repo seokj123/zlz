@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zlz.springboot.goods.mapper.GoodsDemoMapper">
+	<select id="queryGoodsAll" resultType="goodsdemo">
+		select * from goodsdemo
+	</select>
+	<insert id="addGoods">
+		insert into goodsdemo values(null,#{name},#{price},#{creatDate},#{keepDate},#{ml})
+	</insert>
+	<delete id="deleteGoods">
+		delete from goodsdemo where id = #{id}
+	</delete>
+	<select id="queryGoodsById" resultType="goodsdemo">
+		select * from goodsdemo where id =#{id}
+	</select>
+	<update id="updateGoods">
+		update goodsdemo set name=#{name},price=#{price},creatDate=#{creatDate},keepDate=#{keepDate},ml=#{ml} where id=#{id}
+	</update>
+</mapper>
